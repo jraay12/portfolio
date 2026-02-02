@@ -9,7 +9,7 @@ export const recentLearning = [
   {
     month: "January 2026",
     learned: [
-      "Trying to learn DDD and TDD approaches in software development",
+      "Implement Domain Driven Development in my current project.",
       
     ],
   },

@@ -4,20 +4,12 @@ import ProjectCard from "./ProjectCard";
 import { recentProjects } from "../utils/projects";
 import ViewProject from "./ViewProject";
 import { useState } from "react";
-const RecentProject = () => {
-  const [openModal, setOpenModal] = useState(false);
-  const [projectData, setProjectData] = useState([]);
-
-  const handleOpenModal = (item) => {
-    setOpenModal(!openModal);
-    setProjectData(item);
-    console.log(openModal)
-  };
-
-  const handleCloseModal = () => {
-    setOpenModal(false);
-    setProjectData([]);
-  };
+import AOS from "aos";
+import "aos/dist/aos.css";
+const RecentProject = ({ openProject }) => {
+  AOS.init({
+    duration: 2000,
+  });
   return (
     <div className="mt-10 border min-h-96 p-6 flex flex-col rounded-md shadow-md border-gray-300 ">
       <div className="inline-block -translate-y-4">
@@ -26,20 +18,22 @@ const RecentProject = () => {
           Project
         </h4>
       </div>
-      <div className="flex flex-col gap-10 sm:flex-row flex-wrap sm:justify-between md:justify-start mt-10">
+      <div
+        id="project"
+        className="flex flex-col gap-10 sm:flex-row flex-wrap sm:justify-between md:justify-evenly mt-10"
+       
+      >
         {recentProjects.map((item, index) => (
           <ProjectCard
             description={item.Description}
             tech={item.techstack}
             project_name={item.project_name}
             image={item.image}
-            openCard={() => handleOpenModal(item)}
+            openCard={() => openProject(item)}
+            type={item.type}
           />
         ))}
       </div>
-      {openModal && (
-        <ViewProject onClose={handleCloseModal} project={projectData} />
-      )}
     </div>
   );
 };
