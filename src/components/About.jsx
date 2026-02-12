@@ -18,27 +18,29 @@ const About = () => {
         <p className="mt-5 text-justify ">
           I am a graduate of the University of Science and Technology of
           Southern Philippines (USTP) with a Bachelor of Science in Information
-          Technology. Throughout my academic journey, I developed a strong
-          foundation in software development, database systems, and web
-          technologies, which helped shape my interest in building efficient and
-          reliable applications.
-        </p>
-        <p className="mt-5 text-justify">
-          I am deeply passionate about my work and genuinely enjoy solving
-          real-world problems through technology. I thrive on analyzing
-          challenges, designing logical solutions, and continuously learning new
-          tools and best practices to improve my skills. For me, development is
-          not just about writing code, but about creating meaningful systems
-          that make a positive impact.
+          Technology. My primary focus is Software and Web Development, where I
+          build scalable, efficient, and user-centered applications. Throughout
+          my academic and project experience, I developed strong foundations in
+          backend systems, frontend development, and database architecture.
         </p>
 
         <p className="mt-5 text-justify">
-          Currently, I am actively seeking job opportunities as a{" "}
-          <span className="font-bold">Backend Developer</span>, where I can
-          contribute my technical skills, problem-solving abilities, and
-          dedication to a professional team. I am eager to grow in a
-          collaborative environment, take on new challenges, and help build
-          scalable and secure backend systems.
+          I specialize in developing full-stack web applications—designing
+          responsive interfaces, building secure APIs, and managing structured
+          data. In addition to web platforms, I also develop mobile
+          applications, allowing me to create seamless cross-platform solutions
+          that extend from web to mobile environments. I enjoy transforming
+          complex requirements into clean, maintainable, and high-performing
+          systems.
+        </p>
+
+        <p className="mt-5 text-justify">
+          I am passionate about continuous improvement and problem-solving. For
+          me, software development is not just about writing code, but about
+          engineering reliable systems that solve real-world problems. I am
+          currently seeking opportunities where I can contribute as a Software
+          or Web Developer, collaborate with a strong team, and continue growing
+          while building impactful digital solutions.
         </p>
       </div>
     </div>
