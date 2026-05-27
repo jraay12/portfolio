@@ -18,7 +18,51 @@ import findly2 from "../assets/findly2.png";
 import findly3 from "../assets/findly3.png";
 import findly4 from "../assets/findly4.png";
 
+import booking1 from "../assets/booking1.png";
+import booking2 from "../assets/booking2.png";
+import booking3 from "../assets/booking3.png";
+import booking4 from "../assets/booking4.png";
+import booking5 from "../assets/booking5.png";
+
 const projects = {
+  booking: {
+    title: "Multi-Tenant Booking & Service Management System",
+
+    description:
+      "An ongoing personal project focused on building a scalable multi-tenant booking and business management platform with role-based access, appointment scheduling, staff management, real-time booking updates, and service operations for service-based businesses.",
+
+    images: [booking1, booking2, booking3, booking4, booking5],
+
+    stack: [
+      "Google Stitch",
+      "Docker",
+      "MySQL",
+      "Prisma ORM",
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "React.js",
+      "Socket.IO",
+      "RabbitMQ",
+    ],
+
+    features: [
+      "Multi-Tenant Architecture",
+      "Role-Based Access Control",
+      "Appointment Scheduling",
+      "Staff & Service Management",
+      "Real-Time Booking Updates",
+      "Business & Branch Management",
+      "Queue & Booking Workflow",
+      "Authentication & Authorization",
+      "Responsive Dashboard",
+      "Scalable Backend Architecture",
+    ],
+    github: "https://github.com/jraay12/Saas-booking-backend.git",
+
+    impact:
+      "The platform streamlines booking operations and business management for service-based businesses by centralizing appointments, staff coordination, and real-time workflows into a scalable multi-tenant system.",
+  },
   progresso: {
     title: "Progresso",
 
@@ -47,7 +91,7 @@ const projects = {
       "Material Tracking",
       "Approvals & Instructions",
     ],
-     github: "https://github.com/jraay12/progresso-backend.git",
+    github: "https://github.com/jraay12/progresso-backend.git",
 
     impact:
       "The system improves communication between field teams and project managers by centralizing updates, reports, and site activities into one organized workflow.",

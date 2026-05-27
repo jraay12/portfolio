@@ -7,9 +7,29 @@ import ProgressThumbnail from "../assets/progresso-thumbnail.png";
 import GoldSmithThumbnail from "../assets/goldsmith-thumbnail.png";
 import FindlyThumbnail from "../assets/findly-thumbnail.png";
 import SmartLeafThumbnail from "../assets/smartleaf-thumbnail.png";
-
+import BookingThumbnail from "../assets/booking-thumbnail.png"
 export default function FeaturedProjects() {
   const projects = [
+    {
+      id: "booking",
+      title: "Multi-Tenant Booking & Service Management System",
+      description:
+        "An ongoing personal project focused on building a scalable multi-tenant booking and business management platform with role-based access, appointment scheduling, staff management, real-time booking updates, and service operations for service-based businesses.",
+      stack: [
+        "Google Stitch",
+        "Docker",
+        "MySQL",
+        "Prisma ORM",
+        "Node.js",
+        "Express.js",
+        "TypeScript",
+        "React.js",
+        "Socket.IO",
+        "RabbitMQ",
+      ],
+      type: "Ongoing Personal Project",
+      image: BookingThumbnail,
+    },
     {
       id: "progresso",
       title: "Progresso",
@@ -19,11 +39,11 @@ export default function FeaturedProjects() {
         "Prisma ORM",
         "MySQL",
         "Docker",
-        "Github Actions",
-        "Express JS",
-        "Node JS",
+        "GitHub Actions",
+        "Express.js",
+        "Node.js",
         "TypeScript",
-        "React Native (expo)",
+        "React Native (Expo)",
       ],
       type: "Mobile Application",
       image: ProgressThumbnail,
@@ -37,10 +57,10 @@ export default function FeaturedProjects() {
         "Prisma ORM",
         "MySQL",
         "Docker",
-        "Github Actions",
-        "Express JS",
+        "GitHub Actions",
+        "Express.js",
         "JavaScript",
-        "React JS",
+        "React.js",
       ],
       type: "Web Application",
       image: GoldSmithThumbnail,
@@ -54,10 +74,10 @@ export default function FeaturedProjects() {
         "Prisma ORM",
         "MySQL",
         "Docker",
-        "Github Actions",
-        "Express JS",
+        "GitHub Actions",
+        "Express.js",
         "JavaScript",
-        "React JS",
+        "React.js",
       ],
       type: "Web Application",
       image: FindlyThumbnail,
@@ -97,12 +117,12 @@ export default function FeaturedProjects() {
           </p>
         </div>
 
-        <div className="grid gap-10 md:grid-cols-2">
+        <div className="grid items-stretch gap-10 md:grid-cols-2">
           {projects.map((project, index) => (
             <Link
               key={project.id}
               to={`/projects/${project.id}`}
-              className="group relative block"
+              className="group relative block h-full"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -110,7 +130,7 @@ export default function FeaturedProjects() {
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-100 via-slate-100 to-blue-100 opacity-0 blur-2xl transition group-hover:opacity-100" />
 
               {/* Outer Card */}
-              <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
+              <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
                 {/* Thumbnail */}
                 <div className="relative h-52 w-full overflow-hidden">
                   <img
@@ -129,7 +149,7 @@ export default function FeaturedProjects() {
                 </div>
 
                 {/* Content */}
-                <div className="relative m-2 rounded-2xl border border-slate-100 bg-slate-50 p-6">
+                <div className="relative m-2 flex flex-1 flex-col rounded-2xl border border-slate-100 bg-slate-50 p-6">
                   <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black/0 transition-all duration-300 group-hover:bg-black/5">
                     <div className="translate-y-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                       <span className="rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold text-white shadow-lg">
@@ -146,7 +166,7 @@ export default function FeaturedProjects() {
                     {project.description}
                   </p>
 
-                  <div className="mt-4 flex flex-wrap gap-2">
+                  <div className="mt-auto flex flex-wrap gap-2 pt-4">
                     {project.stack.map((tech) => (
                       <span
                         key={tech}
