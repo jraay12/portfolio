@@ -80,7 +80,7 @@ export default function FloatingNavbar() {
             {navItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => scrollToSection(item.href)}
                 className="rounded-xl px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
               >
                 {item.label}
@@ -123,7 +123,7 @@ export default function FloatingNavbar() {
               <button
                 key={item.label}
                 onClick={() => {
-                  scrollToSection(item.id);
+                  scrollToSection(item.href);
                   setMobileOpen(false);
                 }}
                 className="block w-full rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-700 hover:bg-slate-100"
