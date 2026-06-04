@@ -3,13 +3,24 @@ import { Menu, X } from "lucide-react";
 import clsx from "clsx";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Skills", href: "#stack" },
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "home" },
+  { label: "Skills", href: "stack" },
+  { label: "Projects", href: "projects" },
+  { label: "About", href: "about" },
+  { label: "Experience", href: "experience" },
+  { label: "Contact", href: "contact" },
 ];
+
+export const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
 
 export default function FloatingNavbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -57,34 +68,34 @@ export default function FloatingNavbar() {
       >
         <div className="flex items-center justify-between rounded-2xl border border-slate-200 px-6 py-4">
           {/* Logo */}
-          <a
-            href="#home"
+          <button
+            onClick={() => scrollToSection("home")}
             className="text-lg font-black tracking-tight text-slate-900"
           >
             JR.
-          </a>
+          </button>
 
           {/* Desktop Nav */}
           <nav className="hidden items-center gap-2 md:flex">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
+                onClick={() => scrollToSection(item.id)}
                 className="rounded-xl px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
           </nav>
 
           {/* CTA */}
           <div className="hidden md:block">
-            <a
-              href="#contact"
+            <button
+              onClick={() => scrollToSection("contact")}
               className="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-105"
             >
               Hire Me
-            </a>
+            </button>
           </div>
 
           {/* Mobile Button */}
@@ -109,22 +120,24 @@ export default function FloatingNavbar() {
         >
           <div className="space-y-2 rounded-2xl border border-slate-200 bg-white/90 p-4 backdrop-blur-xl">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100"
+                onClick={() => {
+                  scrollToSection(item.id);
+                  setMobileOpen(false);
+                }}
+                className="block w-full rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-700 hover:bg-slate-100"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
 
-            <a
-              href="#contact"
-              className="mt-2 block rounded-xl bg-slate-900 px-4 py-3 text-center text-sm font-semibold text-white"
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-105"
             >
               Hire Me
-            </a>
+            </button>
           </div>
         </div>
       </header>
