@@ -158,7 +158,7 @@ export default function SkillsSection() {
       <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-blue-100 blur-3xl opacity-40" />
       <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-cyan-100 blur-3xl opacity-40" />
 
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative mx-auto max-w-7xl font-playfair">
         {/* Header */}
         <div data-aos="fade-up" className="mb-20 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.4em] text-blue-600">
@@ -169,14 +169,14 @@ export default function SkillsSection() {
             Skills & Technologies
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 font-inter">
             Technologies and tools I use to build scalable web applications,
             mobile apps, APIs, and modern cloud-based systems.
           </p>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 font-inter">
           {skills.map((skill, i) => (
             <div
               key={skill.title}
@@ -230,12 +230,6 @@ export default function SkillsSection() {
           ))}
         </div>
 
-        {/* Bottom Note */}
-        <div data-aos="fade-up" data-aos-delay="200" className="mt-24 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm text-slate-600 shadow-sm">
-            ⚡ Always learning and improving with modern technologies
-          </div>
-        </div>
       </div>
     </section>
   );

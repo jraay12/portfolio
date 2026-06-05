@@ -9,7 +9,7 @@ export default function AboutSection() {
     <section id="about" className="relative bg-white px-6 py-32">
       <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2 lg:items-start">
         {/* LEFT SIDE */}
-        <div>
+        <div className="font-playfair">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">
             About Me
           </p>
@@ -18,22 +18,19 @@ export default function AboutSection() {
             Full-stack developer building scalable and efficient systems.
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600 text-justify">
+          <p className="mt-6 text-lg leading-8 text-slate-600 text-justify font-inter">
             I specialize in developing full-stack web applications—designing
             responsive interfaces, building secure APIs, and managing structured
             data. I also develop mobile applications, enabling seamless
             cross-platform solutions from web to mobile environments.
           </p>
 
-          <p className="mt-5 text-lg leading-8 text-slate-600 text-justify">
+          <p className="mt-5 text-lg leading-8 text-slate-600 text-justify font-inter">
             I am passionate about continuous improvement and problem-solving. I
             focus on building reliable systems that solve real-world problems
             and deliver meaningful user experiences.
           </p>
 
-          <div className="mt-10 text-sm text-slate-400">
-            Focused on clean architecture and real-world applications ⚡
-          </div>
         </div>
 
         {/* RIGHT SIDE - 3 IMAGE MODERN LAYOUT */}

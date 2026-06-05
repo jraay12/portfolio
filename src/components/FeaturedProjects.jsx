@@ -7,9 +7,30 @@ import ProgressThumbnail from "../assets/progresso-thumbnail.png";
 import GoldSmithThumbnail from "../assets/goldsmith-thumbnail.png";
 import FindlyThumbnail from "../assets/findly-thumbnail.png";
 import SmartLeafThumbnail from "../assets/smartleaf-thumbnail.png";
-import BookingThumbnail from "../assets/booking-thumbnail.png"
+import BookingThumbnail from "../assets/booking-thumbnail.png";
+import NimaThumbnail from "../assets/nima-thumbnail.png"
+import { ExternalLink } from "lucide-react";
 export default function FeaturedProjects() {
   const projects = [
+    {
+      id: "nima",
+      title: "Membership and Event Management System",
+      description:
+        "Developed a web-based Membership and Event Management System featuring an administrative dashboard for managing members and events, along with a public-facing portal for viewing organizational information, member profiles, and upcoming events.",
+      stack: [
+        "Docker",
+        "GitHub Actions",
+        "React JS (Vite)",
+        "Tailwind",
+        "Typescript",
+        "Node JS",
+        "Prisma ORM",
+        "Express JS",
+      ],
+      type: "Web Application",
+      image: NimaThumbnail,
+      liveUrl: "https://jraay12.github.io/nima/#/",
+    },
     {
       id: "booking",
       title: "Multi-Tenant Booking & Service Management System",
@@ -27,8 +48,9 @@ export default function FeaturedProjects() {
         "Socket.IO",
         "RabbitMQ",
       ],
-      type: "Ongoing Personal Project",
+      type: "Web Application",
       image: BookingThumbnail,
+      liveUrl: null,
     },
     {
       id: "progresso",
@@ -47,6 +69,7 @@ export default function FeaturedProjects() {
       ],
       type: "Mobile Application",
       image: ProgressThumbnail,
+      liveUrl: null,
     },
     {
       id: "Goldsmith",
@@ -64,6 +87,7 @@ export default function FeaturedProjects() {
       ],
       type: "Web Application",
       image: GoldSmithThumbnail,
+      liveUrl: null,
     },
     {
       id: "Findly",
@@ -81,6 +105,7 @@ export default function FeaturedProjects() {
       ],
       type: "Web Application",
       image: FindlyThumbnail,
+      liveUrl: null,
     },
     {
       id: "smartleaf",
@@ -90,6 +115,7 @@ export default function FeaturedProjects() {
       stack: ["React Native", "Python", "FastAPI", "Kaggle Dataset"],
       type: "Mobile Application",
       image: SmartLeafThumbnail,
+      liveUrl: null,
     },
   ];
 
@@ -106,12 +132,12 @@ export default function FeaturedProjects() {
     <section id="projects" className="min-h-screen bg-white px-6 py-32">
       <div className="mx-auto max-w-6xl">
         {/* Header */}
-        <div className="mb-16 text-center" data-aos="fade-up">
+        <div className="mb-16 text-center font-playfair" data-aos="fade-up">
           <h2 className="mt-4 text-5xl font-black text-slate-900">
             Featured Projects
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-slate-600">
+          <p className="mx-auto mt-4 max-w-2xl text-slate-600 font-inter">
             A selection of projects that showcase my skills in full-stack,
             backend systems, and real-time applications.
           </p>
@@ -138,9 +164,7 @@ export default function FeaturedProjects() {
                     alt={project.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-
                   <div className="absolute left-4 top-4">
                     <span className="rounded-xl bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 backdrop-blur">
                       {project.type}
@@ -158,23 +182,40 @@ export default function FeaturedProjects() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900">
+                  <h3 className="text-xl font-bold text-slate-900 font-playfair">
                     {project.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-6 text-slate-600">
+                  <p className="mt-3 text-sm leading-6 text-slate-600 font-inter">
                     {project.description}
                   </p>
 
-                  <div className="mt-auto flex flex-wrap gap-2 pt-4">
-                    {project.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-lg border border-slate-200 bg-white px-2 py-1 text-xs text-slate-700"
+                  <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4">
+                    <div className="flex flex-wrap gap-2">
+                      {project.stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-lg border border-slate-200 bg-white px-2 py-1 text-xs text-slate-700"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Live Preview Button */}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="relative z-10 group/btn flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-xs font-semibold tracking-wide text-slate-800 shadow-sm transition-all duration-200 hover:border-slate-400 hover:bg-slate-50 hover:shadow-md hover:-translate-y-px"
                       >
-                        {tech}
-                      </span>
-                    ))}
+                        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
+                        View Live Site
+                        <ExternalLink className="h-3 w-3 transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

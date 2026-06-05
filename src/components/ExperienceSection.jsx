@@ -51,7 +51,7 @@ export default function ExperienceSection() {
 
       <div className="relative mx-auto max-w-6xl">
         {/* Header */}
-        <div className="mb-24 text-center" data-aos="fade-up">
+        <div className="mb-24 text-center font-playfair" data-aos="fade-up">
           <div
             className="
               inline-flex items-center gap-2 rounded-full
@@ -69,7 +69,7 @@ export default function ExperienceSection() {
             Journey & Experience
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 font-inter">
             Building scalable applications, solving real-world problems, and
             continuously improving through hands-on development experience.
           </p>
@@ -145,7 +145,7 @@ export default function ExperienceSection() {
                       "
                     />
 
-                    <div className="relative">
+                    <div className="relative font-inter">
                       {/* Year */}
                       <div
                         className="
@@ -161,7 +161,7 @@ export default function ExperienceSection() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="mt-6 text-3xl font-black tracking-tight text-slate-900">
+                      <h3 className="mt-6 text-3xl font-black tracking-tight text-slate-900 font-playfair">
                         {item.title}
                       </h3>
 

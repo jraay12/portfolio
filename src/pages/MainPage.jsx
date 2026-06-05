@@ -94,7 +94,7 @@ export default function MainPage() {
           </div>
 
           {/* Fake Code */}
-          <div className="space-y-4 p-8 font-mono text-sm md:text-base">
+          <div className="space-y-4 p-8 font-inter text-sm  ">
             <div className="text-purple-600">
               const <span className="text-blue-600">developer</span> = {"{"}
             </div>
@@ -121,34 +121,34 @@ export default function MainPage() {
         </div>
 
         {/* Floating Cards */}
-        <div className="floating-card absolute bottom-32 left-20 hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-xl lg:block">
+        <div className="floating-card absolute bottom-32 left-20 hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-xl lg:block font-inter">
           <p className="font-semibold text-slate-900">Frontend</p>
 
           <p className="text-slate-500">React • Tailwind</p>
         </div>
 
-        <div className="floating-card absolute right-20 top-[45%] hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-xl lg:block">
+        <div className="floating-card absolute right-20 top-[45%] hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-xl lg:block font-inter">
           <p className="font-semibold text-slate-900">Backend</p>
 
           <p className="text-slate-500">Node.js • Express • Prisma</p>
         </div>
 
         {/* Mobile Development */}
-        <div className="floating-card absolute left-[12%] top-[55%] hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-xl xl:block">
+        <div className="floating-card absolute left-[12%] top-[55%] hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-xl xl:block font-inter">
           <p className="font-semibold text-slate-900">Mobile Development</p>
 
           <p className="text-slate-500">Flutter • React Native</p>
         </div>
 
         {/* DevOps */}
-        <div className="floating-card absolute bottom-24 right-[12%] hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-xl xl:block">
+        <div className="floating-card absolute bottom-24 right-[12%] hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-xl xl:block font-inter">
           <p className="font-semibold text-slate-900">DevOps</p>
 
           <p className="text-slate-500">Docker • AWS • Nginx</p>
         </div>
 
         {/* Hero Text */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <div className="absolute inset-0 flex flex-col items-center justify-center font-playfair">
           <div className="hero-text space-y-6 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.4em] text-blue-600">
               Portfolio
@@ -160,7 +160,7 @@ export default function MainPage() {
               DEVELOPER
             </h1>
 
-            <p className="mx-auto max-w-xl text-lg text-slate-600">
+            <p className="mx-auto max-w-xl text-lg text-slate-600 font-inter">
               Building scalable web applications with modern technologies and
               smooth user experiences.
             </p>

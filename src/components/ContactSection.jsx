@@ -6,15 +6,15 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-slate-50 px-6 py-32">
+    <section id="contact" className="bg-slate-50 px-6 py-32 font-inter">
       <div className="mx-auto max-w-4xl text-center">
 
         {/* Header */}
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600 font-playfair">
           Contact
         </p>
 
-        <h2 className="mt-4 text-5xl font-black text-slate-900">
+        <h2 className="mt-4 text-5xl font-black text-slate-900 font-playfair">
           Let’s work together
         </h2>
 

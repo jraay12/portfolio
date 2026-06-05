@@ -56,7 +56,7 @@ export default function FloatingNavbar() {
       {/* Floating Navbar */}
       <header
         className={clsx(
-          "fixed left-1/2 top-6 z-50 w-[92%] max-w-5xl -translate-x-1/2",
+          "fixed left-1/2 top-6 z-50 w-[92%] max-w-5xl -translate-x-1/2 font-inter",
           "transition-all duration-300",
 
           hidden ? "-translate-y-24 opacity-0" : "translate-y-0 opacity-100",
